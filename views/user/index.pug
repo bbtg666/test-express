@@ -1,0 +1,24 @@
+extends ../layout/common
+
+block content
+    h1 
+        span.mr-3 User
+        a.btn.btn-secondary(href="/user/create") New
+    .d-flex.align-items-center
+        form.ml-auto.d-flex(action="/user/search", method="GET")
+            input.form-control(type="text", name="q")
+            button.btn.btn-info.ml-3 Search
+
+    table.table
+        thead
+            tr
+                th Name
+                th Phone
+                th Actions
+        each user in users
+            tbody
+                tr
+                    td= user.name
+                    td= user.phone
+                    td 
+                        a.btn.btn-light(href='/user/cc/' + user.id) View
