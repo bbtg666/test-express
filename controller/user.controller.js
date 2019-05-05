@@ -15,14 +15,16 @@ module.exports.index =  function (req, res) {
         users: db.get('user').value()
     });
 };
+
+module.exports.create = function (req, res) {
+    console.log(req.cookies);
+    res.render('user/create')
+};
+
 module.exports.postCreate = function (req, res) {
     req.body.id = shortid.generate();
     db.get('user').push(req.body).write();
     res.redirect('/user');
-};
-
-module.exports.create = function (req, res) {
-    res.render('user/create')
 };
 
 module.exports.search = function (req, res) {
