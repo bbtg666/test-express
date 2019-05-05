@@ -1,7 +1,7 @@
 {
   "user": [
     {
-      "name": "Nguyễn Trường Giang123",
+      "name": "Nguyễn Trường Giang",
       "phone": "0123444545455",
       "id": "gACo6iM7n"
     },
@@ -16,9 +16,11 @@
       "id": "vfgRLtAEB"
     },
     {
-      "name": "Nguyễn Trường Giang 123",
+      "name": "Nguyễn Trường Giang",
       "phone": "324234",
-      "id": "bi8VU9wwR"
+      "id": "bi8VU9wwR",
+      "email": "t.la.giang.1@gmail.com",
+      "password": "25f9e794323b453885f5181f1b624d0b"
     },
     {
       "name": "Đỗ Hữu Đức",
@@ -34,6 +36,21 @@
       "name": "Nguyễn Thái Dương",
       "phone": "01457874526",
       "id": "q-m-IwIK0"
+    },
+    {
+      "name": "Nguyễn Trường Giang",
+      "phone": "45677889909",
+      "id": "hXP1Nq4ar"
+    },
+    {
+      "name": "Nguyễn Trường Giang",
+      "phone": "123456789",
+      "id": "cMeaeq1SU"
+    },
+    {
+      "name": "Nguyễn Trường Giang",
+      "phone": "123456789",
+      "id": "DSyuuB0g2"
     }
   ]
 }
