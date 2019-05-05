@@ -17,12 +17,13 @@ module.exports.index =  function (req, res) {
 };
 
 module.exports.create = function (req, res) {
-    console.log(req.cookies);
     res.render('user/create')
 };
 
 module.exports.postCreate = function (req, res) {
     req.body.id = shortid.generate();
+    req.body.avatar = req.file.path.split('\\').slice(1).join('/');
+
     db.get('user').push(req.body).write();
     res.redirect('/user');
 };

@@ -6,12 +6,15 @@ block content
         each error in errors
             .alert.alert-danger= error
 
-    form(action="/user/create", method="POST")
+    form(action="/user/create", method="POST", enctype="multipart/form-data")
         .form-group
             label(for="name") Name
             input#name.form-control(type="text", name="name", value= values ? values.name : '')
-
+        .form-group
             label.mt-3(for="phone") Phone
             input#phone.form-control(type="text", name="phone", value= values ? values.phone : '')
+        .form-group
+            label.mt-3(for="avatar") Phone
+            input#avatar.form-control-file(type="file", name="avatar")
 
-            button.btn.btn-dark.mt-3 Create
+        button.btn.btn-dark.mt-3 Create
