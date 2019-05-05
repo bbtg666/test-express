@@ -17,20 +17,6 @@ module.exports.index =  function (req, res) {
 };
 module.exports.postCreate = function (req, res) {
     req.body.id = shortid.generate();
-    var errors = []
-    if(!req.body.name){
-        errors.push('Chưa có tên!!!!')
-    }
-    if(!req.body.phone){
-        errors.push('Chưa có phone!!!!')
-    }
-    if(errors.length){
-        res.render('user/create', {
-            errors: errors,
-            values: req.body
-        })
-        return;
-    }
     db.get('user').push(req.body).write();
     res.redirect('/user');
 };
